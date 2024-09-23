@@ -1,0 +1,105 @@
+:root {
+    --bg: white;
+    --textColor: black;
+    --softBg: #f0f0f0;
+    --softTextColor: #626262;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .dark {
+    --bg: #0f172a;
+    --textColor: #ddd;
+    --softBg: #1f273a;
+    --softTextColor: #a6a6a6;
+  }
+  
+  .light {
+    --bg: white;
+    --textColor: black;
+    --softBg: #f0f0f0;
+    --softTextColor: #626262;
+  }
+  
+  .container {
+    min-height: 100vh;
+    background-color: var(--bg);
+    color: var(--textColor);
+  }
+  
+  .wrapper {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  
+  @media screen and (max-width: 1536px) {
+    .wrapper {
+      max-width: 1366px;
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    .wrapper {
+      max-width: 1024px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .wrapper {
+      max-width: 768px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      max-width: 640px;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .wrapper {
+      max-width: 475px;
+    }
+  }
+  
+  .ql-container{
+    font-size: 28px !important;
+  }
+  
+  .quill > .ql-container > .ql-editor.ql-blank::before{
+    color: #b3b3b1;
+  }
+
+
+  .loader {
+    width: 25px;
+    --b: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 1px;
+    background: conic-gradient(#0000 10%, #4d06c9) content-box;
+    -webkit-mask: repeating-conic-gradient(#0000 0deg,
+        #000 1deg 20deg,
+        #0000 21deg 36deg),
+      radial-gradient(farthest-side,
+        #0000 calc(100% - var(--b) - 1px),
+        #000 calc(100% - var(--b)));
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+    animation: l4 1s infinite steps(10);
+  }
